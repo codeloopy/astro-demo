@@ -1,0 +1,9 @@
+---
+import { TAG_COLORS } from '../constants';
+import { CapitalizeWords } from '../utils';
+const { tag, index } = Astro.props;
+---
+
+<span class=`px-2 py-1 text-white rounded-full text-xs hover:opacity-90 bg-${TAG_COLORS[index]}-500`>
+  <a href=`/articles/tag/${tag}`>#{CapitalizeWords(tag)}</a>
+</span>
